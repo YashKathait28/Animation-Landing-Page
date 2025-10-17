@@ -1,0 +1,221 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Particle Canvas */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 4rem;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.hero-btn {
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  background: white;
+  color: #6a11cb;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.hero-btn:hover {
+  transform: scale(1.1);
+  background: #f0f0f0;
+}
+
+/* Floating Shape */
+.hero-shape {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Features Section */
+.features {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.features h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 300px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(50px) rotateY(15deg);
+  transition: all 0.8s ease, transform 0.5s ease;
+}
+
+.card i {
+  color: #6a11cb;
+  margin-bottom: 15px;
+}
+
+.card:hover {
+  transform: translateY(-10px) rotateY(0deg) scale(1.05);
+}
+
+/* Services Section */
+.services {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #ff7eb3, #ff758c);
+  color: white;
+}
+
+.services h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 280px;
+  color: white;
+  text-align: center;
+  transition: transform 0.5s, background 0.5s;
+}
+
+.service-card i {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.service-card:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,0.2);
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 80px 20px;
+  text-align: center;
+  background: #2575fc;
+  color: white;
+}
+
+.testimonials h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.testimonial-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 150px;
+}
+
+.testimonial {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+  position: absolute;
+  width: 100%;
+}
+
+.testimonial.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #6a11cb;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-30px); }
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .hero-title { font-size: 3rem; }
+  .hero-subtitle { font-size: 1.2rem; }
+  .feature-cards, .service-cards { flex-direction: column; align-items: center; }
+}

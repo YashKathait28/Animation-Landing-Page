@@ -1,16 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animata Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-    
+  <!-- Particle Background -->
+  <canvas id="particles"></canvas>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Welcome to Animata</h1>
+      <p class="hero-subtitle">Experience smooth animations & stunning visuals</p>
+      <button class="hero-btn">Get Started</button>
+    </div>
+    <div class="hero-shape"></div>
+  </section>
 
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Our Features</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <i class="fa-solid fa-bolt fa-2xl"></i>
+        <h3>Fast</h3>
+        <p>Blazing fast performance with smooth animations.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-mobile-screen-button fa-2xl"></i>
+        <h3>Responsive</h3>
+        <p>Looks great on any device and screen size.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-mouse-pointer fa-2xl"></i>
+        <h3>Interactive</h3>
+        <p>Engage your users with interactive elements.</p>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <i class="fa-solid fa-paintbrush fa-3xl"></i>
+        <h3>UI/UX Design</h3>
+        <p>Modern designs to attract and retain users effectively.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa-solid fa-code fa-3xl"></i>
+        <h3>Web Development</h3>
+        <p>Fast, responsive, and fully functional websites.</p>
+      </div>
+      <div class="service-card">
+        <i class="fa-solid fa-rocket fa-3xl"></i>
+        <h3>Animation</h3>
+        <p>Engaging animations to make your website lively.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What People Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial active">
+        <p>"Animata transformed our website with amazing animations!"</p>
+        <h4>- John Doe</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Highly professional and visually stunning designs!"</p>
+        <h4>- Sarah Lee</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Interactive elements made our website very engaging!"</p>
+        <h4>- Mike Ross</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Animata. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
